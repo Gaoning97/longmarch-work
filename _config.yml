@@ -1,11 +1,11 @@
 # Basic
 title: raven
 subtitle: 个人站
-description: 欢迎来到我的blog站~
+description: 欢迎来到我的博客站~
 # 头像里面的标题
 avatarTitle: raven-blog
 # 头像里面的描述
-avatarDesc: java / gp
+avatarDesc: java / go
 url: "http://blog.longmarch.work/"
 
 # 博客是否自动生成目录，false为不生成
@@ -14,8 +14,7 @@ enableToc: true
 # Social
 social:
     github: raven1997s
-    zhihu: 流年依旧留恋着ta
-    csdb: weixin_44993313
+    csdn: weixin_44993313
     mail: 345069789@qq.com
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
