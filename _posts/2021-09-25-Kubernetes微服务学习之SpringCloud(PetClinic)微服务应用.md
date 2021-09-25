@@ -4,13 +4,12 @@ title: Kubernetes微服务学习之SpringCloud(PetClinic)微服务应用
 tags: k8s
 categories: k8s
 ---
-[toc]
 # spring社区版PetClinic微服务项目技术栈及架构简介
 ![image](http://oss.longmarch.work/k8s-1-1.png)
 ![image](http://oss.longmarch.work/k8s-1-2.png)
 
 # PetClinic微服务Docker Compose 部署文件简析
-==**Docker-Compose:**==
+**Docker-Compose:**
 是可以一键运行/关闭Docker容器(只要在开发测试使用)，规范服务镜像的依赖关系的管理Docker容器的工具。
 
     docker-compose up 一键启动
@@ -18,7 +17,6 @@ categories: k8s
     docker-compose down 一键关闭
 ```yaml
 version: '2'
-
 services:
 ## 服务名称
   config-server:
@@ -127,7 +125,7 @@ services:
 
 ```
 
-==**简析doker-compose.yml注意点:**==
+**简析doker-compose.yml注意点:**
 
 - dopends_on 定义容器依赖和启动次序
 - dockerrize命令规范容器内应用依赖和启动次序
@@ -160,8 +158,8 @@ services:
 
 ## Springcloud版PetClinic微服务 VS K8s版PetClinic微服务
 - SC未解决服务自动化部署问题,==K8s是容器化微服务调度发布平台==
-- ==K8s内置支持发现 + loadbalance==
-- ==k8s平台对具体服务架构无关==
+- **K8s内置支持发现 + loadbalance**
+- **k8s平台对具体服务架构无关**
 - SC：组件框架式架构 K8s：平台型架构
 - K8S是面向容器和微服务的云计算平台
 
