@@ -29,8 +29,9 @@ services:
   ## 端口号映射关系    
     ports:
      - 8888:8888
-
-  discovery-server:
+```
+```yaml
+ discovery-server:
     image: springcommunity/spring-petclinic-discovery-server
     container_name: discovery-server
     mem_limit: 512M
@@ -122,7 +123,6 @@ services:
     mem_limit: 256M
     ports:
     - 9091:9090
-
 ```
 
 **简析doker-compose.yml注意点:**
