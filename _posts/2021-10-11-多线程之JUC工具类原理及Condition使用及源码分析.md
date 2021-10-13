@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2021-10-11-多线程之JUC工具类原理及Condition使用及源码分析
+title: 多线程之JUC工具类原理及Condition使用及源码分析
 tags: 多线程
 categories: 多线程
 ---
