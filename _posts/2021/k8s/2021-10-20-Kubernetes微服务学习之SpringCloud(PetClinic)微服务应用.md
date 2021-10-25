@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Kubernetes微服务学习之SpringCloud(PetClinic)微服务应用
-tags: K8s
-categories: K8s
+tags: k8s
+categories: k8s
 ---
 # spring社区版PetClinic微服务项目技术栈及架构简介
 ![image](http://oss.longmarch.work/k8s-1-1.png)
