@@ -3,7 +3,7 @@ layout: post
 title: 引入redisson踩坑(Unable to init enough connections amount!)
 tags: redisson
 categories: redisson
-
+---
 ## 业务背景:
 
 项目中有业务需要用到分布式锁的功能,而redisson对于分布式锁有比较好的封装,于是遍着手开干接入redisson。
@@ -24,13 +24,13 @@ RedisConnectionException：Unable to init enough connections amount! Only 15 of 
 public class RedissonDemoApplicationTests {
 
 
-    @Resource
-    private RedissonClient redissonClient;
+@Resource
+private RedissonClient redissonClient;
 
-    @Test
-    public void contextLoads() throws IOException {
-		System.out.println("Test");
-    }
+@Test
+public void contextLoads() throws IOException {
+System.out.println("Test");
+}
 
 }
 ```
@@ -53,24 +53,24 @@ public class RedissonDemoApplicationTests {
 public class RedissonAutoConfiguration {
 
 
-    @Value("${redisson.address}")
-    private String addressUrl;
-    @Value("${redisson.password}")
-    private String password;
+@Value("${redisson.address}")
+private String addressUrl;
+@Value("${redisson.password}")
+private String password;
 
-    @Bean
-    public RedissonClient getRedisson() {
-        Config config = new Config();
-        config.useSingleServer()
-                .setAddress(addressUrl)
-                .setPassword(password)
-                .setRetryInterval(5000)
-                .setTimeout(10000)
-                .setConnectTimeout(10000)
-				// 设置连接数为1
-                .setConnectionMinimumIdleSize(1);
-        return Redisson.create(config);
-    }
+@Bean
+public RedissonClient getRedisson() {
+Config config = new Config();
+config.useSingleServer()
+.setAddress(addressUrl)
+.setPassword(password)
+.setRetryInterval(5000)
+.setTimeout(10000)
+.setConnectTimeout(10000)
+// 设置连接数为1
+.setConnectionMinimumIdleSize(1);
+return Redisson.create(config);
+}
 }
 ```
 
