@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 引入redisson踩坑(Unable to init enough connections amount!)
-tags: redisson
-categories: redisson
+tags: redisson踩坑
+categories: redisson踩坑
 ---
 ## 业务背景:
 
